@@ -1,0 +1,156 @@
+/* Import font from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6a707d;
+}
+
+/* 
+    Utility
+    Classes
+*/
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.u-text-blue {
+    color: #4ca9ff;
+}
+
+/* Styles */
+
+/* 
+    Colors:
+        blue: #4ca9ff;
+*/
+.main-header {
+    height: 850px;
+    
+    background-image: url('../img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    padding: 30px 0;
+
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.main-header__logo {
+    float: left;
+}
+
+.main-header__logo-img {
+    width: 130px;
+}
+
+.main-header__menu-btn {
+    float: right;
+
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    margin-top: 12px;
+}
+
+.main-header__menu-text {
+    font-family: inherit;
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+
+    margin-right: 18px;
+
+    transition: color .2s ease;
+}
+
+.main-header__menu-icon {
+    position: relative;
+    top: 2px;
+
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+
+    background-color: #4ca9ff;
+
+    transition: width .2s ease;
+}
+
+.main-header__menu-icon::before,
+.main-header__menu-icon::after {
+    content: '';
+    display: block;
+    height: 2px;
+
+    background-color: #4ca9ff;
+
+    position: absolute;
+
+    transition: width .2s ease;
+}
+
+.main-header__menu-icon::before {
+    width: 20px;
+    top: -16px;
+}
+
+.main-header__menu-icon::after {
+    width: 14px;
+    top: -8px;
+}
+
+.main-header__menu-btn:hover .main-header__menu-text {
+    color: #ccc;
+}
+
+.main-header__menu-btn:hover .main-header__menu-icon::after {
+    width: 20px;
+}
+
+.main-header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-header__heading-invisible {
+    visibility: hidden;
+}
+
+.main-header__heading-visible {
+    font-size: 90px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.main-header__scroll-box {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
