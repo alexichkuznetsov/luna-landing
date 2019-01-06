@@ -758,6 +758,10 @@ body {
         width: 50%;
     }
 
+    .card {
+        pointer-events: none;
+    }
+
     .progress-bar__fill {
         width: 50%;
         left: 25%;
